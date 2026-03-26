@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: mondevis-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mondevis
+    username: renaldotrashi
+    password:
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.mondevis.api: DEBUG
+    org.springframework.web: INFO
